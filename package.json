@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "nodemon lib/app.js --exec babel-node",
-    "build": "babel lib -d dist"
+    "build": "babel lib -d dist",
+    "start": "PORT=80 node dist/app.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
